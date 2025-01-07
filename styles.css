@@ -1,0 +1,104 @@
+body {
+  width: 300px;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  background: #fff;
+}
+
+#rooms {
+  padding: 16px;
+}
+
+.room {
+  background: #f5fafa;
+  border: 1px solid #eef4f4;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.room:last-child {
+  margin-bottom: 0;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.room-name {
+  font-weight: 500;
+  color: #141414;
+}
+
+.room-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgb(113 109 255);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.room-link:hover {
+  opacity: 0.9;
+}
+
+.room-link:after {
+  content: 'Join';
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #474d4d;
+  font-size: 14px;
+}
+
+.user img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #eef4f4;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #141414;
+  padding: 16px 16px 0;
+  margin-bottom: 4px;
+}
+
+.no-calls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+  text-align: center;
+  color: #474d4d;
+}
+
+.join-general {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin-top: 16px;
+  background: rgb(113 109 255);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.join-general:hover {
+  opacity: 0.9;
+} 

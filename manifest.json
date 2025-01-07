@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Vibehut · Active Calls Chrome Extension",
+  "version": "1.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://vibehut.io/*"],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://vibehut.io/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
