@@ -14,6 +14,17 @@ function updateBadge() {
   .catch(console.error);
 }
 
-// Update badge every 20 seconds
-updateBadge();
-setInterval(updateBadge, 20000); 
+// Create alarm to update badge every 20 seconds (0.33 minutes)
+chrome.alarms.create('updateBadge', { 
+  periodInMinutes: 0.33 
+});
+
+// Listen for alarm
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'updateBadge') {
+    updateBadge();
+  }
+});
+
+// Initial update when extension loads
+updateBadge(); 
